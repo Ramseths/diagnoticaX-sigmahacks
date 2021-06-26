@@ -29,7 +29,9 @@ class Diagnotica(QMainWindow):
         CLASSES = ['Normal', 'Covid19+']
         ClassPred = CLASSES[prediccion]
         ClassProb = result
-        self.txtName.setText(ClassPred)
+        # Mostrar los resultados en las etiquetas
+        self.lblClass.setText(ClassPred)
+        self.lblScore.setText(format(ClassProb))
 
     global path
 
@@ -43,7 +45,7 @@ class Diagnotica(QMainWindow):
     # Show the image in the box
     def showX(self, path):
         pixmap = QPixmap(path)
-        pixmap_resized = pixmap.scaled(441, 411)
+        pixmap_resized = pixmap.scaled(481, 431)
         self.xray.setPixmap(pixmap_resized)
 
 
