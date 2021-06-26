@@ -1,8 +1,10 @@
 import sys
 from PyQt5 import uic
-from PyQt5.QtWidgets import QMainWindow, QApplication
+from PyQt5.QtWidgets import QMainWindow, QApplication, QDialog, QFileDialog
 from keras.models import load_model
 from keras_preprocessing import image
+from PyQt5.QtGui import QPixmap
+from PyQt5.QtCore import Qt
 import numpy as np
 
 class Diagnotica(QMainWindow):
@@ -10,7 +12,8 @@ class Diagnotica(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi("gui_app.ui", self)
-        self.btnDiagnosis.clicked.connect(lambda: self.loadModel("rx.jpg"))
+        self.btnDiagnosis.clicked.connect(lambda: self.loadModel(self.txtPath.text()))
+        self.btnBrowser.clicked.connect(self.browseFIle)
 
     def loadModel(self, file):
         # Cargar el modelo
@@ -24,10 +27,25 @@ class Diagnotica(QMainWindow):
         result = modelo_cargado.predict(test_image)[0][0]
         prediccion = 1 if (result >= 0.5) else 0
         CLASSES = ['Normal', 'Covid19+']
-
         ClassPred = CLASSES[prediccion]
         ClassProb = result
         self.txtName.setText(ClassPred)
+
+    global path
+
+    def browseFIle(self):
+        filename = QFileDialog.getOpenFileName(self, 'Open file', 'C:', '*.jpg')
+        self.txtPath.setText(filename[0])
+        path = filename[0]
+        self.showX(path)
+
+    # Mostrar la imagen en el cuadro
+    # Show the image in the box
+    def showX(self, path):
+        pixmap = QPixmap(path)
+        pixmap_resized = pixmap.scaled(441, 411)
+        self.xray.setPixmap(pixmap_resized)
+
 
 if __name__ == '__main__':
     #Iniciar app
