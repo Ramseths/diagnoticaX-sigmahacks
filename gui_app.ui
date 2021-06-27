@@ -27,6 +27,9 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QFrame" name="verticalFrame">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -76,33 +79,37 @@
      <string notr="true">background-color: rgb(3, 70, 115);
 background-color: rgb(8, 59, 103);</string>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_3">
-     <item>
-      <widget class="QLabel" name="label_2">
-       <property name="font">
-        <font>
-         <family>Bahnschrift Light</family>
-         <pointsize>15</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);</string>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::NoFrame</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Sunken</enum>
-       </property>
-       <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With &lt;span style=&quot; font-weight:600;&quot;&gt;Diagnotica X&lt;/span&gt; get a reliable and fast &lt;span style=&quot; font-weight:600;&quot;&gt;COVID-19&lt;/span&gt;&lt;/p&gt;&lt;p&gt;diagnosis using an artificial intelligence model. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-       <property name="textFormat">
-        <enum>Qt::RichText</enum>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>11</y>
+       <width>481</width>
+       <height>72</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Bahnschrift Light</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With &lt;span style=&quot; font-weight:600;&quot;&gt;Diagnotica X&lt;/span&gt; get a reliable and fast &lt;span style=&quot; font-weight:600;&quot;&gt;COVID-19&lt;/span&gt;&lt;/p&gt;&lt;p&gt;diagnosis using an artificial intelligence model. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::RichText</enum>
+     </property>
+    </widget>
    </widget>
    <widget class="QFrame" name="verticalFrame_3">
     <property name="geometry">
@@ -215,9 +222,9 @@ color: rgb(255, 255, 255);</string>
      <property name="geometry">
       <rect>
        <x>150</x>
-       <y>50</y>
+       <y>90</y>
        <width>211</width>
-       <height>81</height>
+       <height>41</height>
       </rect>
      </property>
      <property name="font">
@@ -259,7 +266,7 @@ color: rgb(255, 255, 255);</string>
      <property name="geometry">
       <rect>
        <x>90</x>
-       <y>20</y>
+       <y>240</y>
        <width>221</width>
        <height>61</height>
       </rect>
@@ -277,7 +284,7 @@ color: rgb(255, 255, 255);</string>
 background-color: rgb(0, 85, 127);</string>
      </property>
      <property name="text">
-      <string>Run Diagnosis</string>
+      <string>Run Diagnostic</string>
      </property>
      <property name="default">
       <bool>false</bool>
@@ -289,9 +296,9 @@ background-color: rgb(0, 85, 127);</string>
     <widget class="QLabel" name="label_6">
      <property name="geometry">
       <rect>
-       <x>100</x>
-       <y>160</y>
-       <width>81</width>
+       <x>60</x>
+       <y>310</y>
+       <width>111</width>
        <height>41</height>
       </rect>
      </property>
@@ -311,14 +318,14 @@ background-color: rgb(0, 85, 127);</string>
       <enum>QFrame::Sunken</enum>
      </property>
      <property name="text">
-      <string>Score:</string>
+      <string>Score (%):</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_7">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>210</y>
+       <y>360</y>
        <width>161</width>
        <height>41</height>
       </rect>
@@ -346,7 +353,7 @@ background-color: rgb(0, 85, 127);</string>
      <property name="geometry">
       <rect>
        <x>180</x>
-       <y>160</y>
+       <y>310</y>
        <width>81</width>
        <height>41</height>
       </rect>
@@ -374,7 +381,7 @@ background-color: rgb(0, 85, 127);</string>
      <property name="geometry">
       <rect>
        <x>180</x>
-       <y>210</y>
+       <y>360</y>
        <width>81</width>
        <height>41</height>
       </rect>
@@ -396,6 +403,37 @@ background-color: rgb(0, 85, 127);</string>
      </property>
      <property name="text">
       <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>381</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Bahnschrift Light</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Instructions&lt;/p&gt;&lt;p&gt;1. Upload your X-ray image.&lt;/p&gt;&lt;p&gt;2. Click on &amp;quot;Run Diagnostic&amp;quot;.&lt;/p&gt;&lt;p&gt;3. Get your score and classification.&lt;/p&gt;&lt;p&gt;*Normal: Good.&lt;/p&gt;&lt;p&gt;*Covid19: Go to a doctor. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::RichText</enum>
      </property>
     </widget>
    </widget>

@@ -11,6 +11,9 @@ class Diagnotica(QMainWindow):
 
     def __init__(self):
         super().__init__()
+        text = "Diagnotica X"
+        self.setWindowTitle(text)
+        self.setFixedSize(898, 797)
         uic.loadUi("gui_app.ui", self)
         self.btnDiagnosis.clicked.connect(lambda: self.loadModel(self.txtPath.text()))
         self.btnBrowser.clicked.connect(self.browseFIle)
@@ -28,10 +31,10 @@ class Diagnotica(QMainWindow):
         prediccion = 1 if (result >= 0.5) else 0
         CLASSES = ['Normal', 'Covid19+']
         ClassPred = CLASSES[prediccion]
-        ClassProb = result
+        ClassProb = result * 100
         # Mostrar los resultados en las etiquetas
         self.lblClass.setText(ClassPred)
-        self.lblScore.setText(format(ClassProb))
+        self.lblScore.setText(format(ClassProb, '.2f'))
 
     global path
 
