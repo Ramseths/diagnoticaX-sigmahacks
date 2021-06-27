@@ -1,5 +1,5 @@
 # Diagnotica X Application for detecting COVID-19 in chest X-ray images
-# Author: Jesus Ramseths Echeverría Rivera
+# Author: Jesus Ramseths Echeverría
 
 - This project is designed for the Sigmahacks 3 hackathon.
 - You need to have Python 3.7 or higher and PyQt5.
