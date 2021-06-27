@@ -9,4 +9,16 @@
 It was trained with images from an external public access repository.</p>
 
 ## Stage 2:
-<p>The model is loaded in app.py and a graphical interface is created with PyQt5 which allows a better interaction with the model.</p>
+<p>The interface is created in Qt Creator to achieve a more comfortable interaction for the user, in addition to maintaining the KISS principle. </p>
+
+## Stage 3:
+<p>The model is saved in the model folder and is used in the app.py script, in which the whole PyQt5 structure is implemented.</p>
+
+## Stage 4:
+<p>Finally, it is tested with two internet images, one of the chest with COVID-19 and the other of the normal chest, both of which are X-ray images, in addition to being images never seen before by our model, which successfully predicted both images.</p>
+
+## About DenseNet-201
+<p>It is a powerful 201-layer convolutional neural network that obtains a more minimal error compared to the human eye. This network was trained with ImageNet, so only in this project we did transfer learning for our two classes [Normal, Covid19].</p>
+
+
+
